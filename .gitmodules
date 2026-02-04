@@ -1,0 +1,3 @@
+[submodule "MdocZK/Sources/CMdocZK/longfellow-zk"]
+	path = MdocZK/Sources/CMdocZK/longfellow-zk
+	url = https://github.com/google/longfellow-zk.git

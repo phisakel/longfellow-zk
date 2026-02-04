@@ -57,12 +57,19 @@ First run the cmake initialization step
 
 ```
 $ CXX=clang++ cmake -D CMAKE_BUILD_TYPE=Release -S lib -B clang-build-release --install-prefix ${PWD}/install
+$ CXX=clang++ cmake -D CMAKE_BUILD_TYPE=Debug -S lib -B clang-build-debug --install-prefix ${PWD}/install
+
+cmake -G Xcode -B build -S lib
 ```
 
 Next:
 
 ```
 $ cd clang-build-release && make -j 16 && ctest -j 16
+$ cd clang-build-debug && make -j 16 && ctest -j 16
+
+git clone --recursive https://github.com/google/longfellow-zk
+swift build --sdk $(xcrun --sdk iphoneos --show-sdk-path) --triple arm64-apple-ios15.0
 ```
 
 # Running benchmarks
